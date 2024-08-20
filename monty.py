@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import math
 
 
-def generateCoordinates(RADIAL : bool, xs, ys) -> int:
+def generateCoordinate(RADIAL : bool, xs, ys) -> int:
     
     if (RADIAL):
         xPos, yPos, radius = generateCoordinatesRadially(xs, ys)
@@ -14,7 +14,7 @@ def generateCoordinates(RADIAL : bool, xs, ys) -> int:
     xCoords.append(xPos)
     yCoords.append(yPos)
     
-    # print(xPos, yPos, radius)
+    # print(radius)
     
     return radius
 
@@ -27,8 +27,8 @@ def generateCoordinatesRadially(xs, ys):
     radius = rng.uniform(0.0,1.0)
     
     # generate a point based on the angle and radius
-    xPos = math.sin(theta)
-    yPos = math.cos(theta)
+    xPos = math.sin(theta) * radius
+    yPos = math.cos(theta) * radius
     # print(theta, radius, xPos, yPos)
     
     return xPos, yPos, radius
@@ -42,7 +42,7 @@ def generateCoordinatesUniformly(xs, ys):
 
 
 if __name__ == "__main__":
-    print("Hello, World!")
+    # print("Hello, World!")
 
     # here i have the arrays and other important things
     xCoords = []
@@ -51,18 +51,19 @@ if __name__ == "__main__":
     imperialArr = [0, 0, 0, 0, 0]
     metricArrR = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     imperialArrR = [0, 0, 0, 0, 0]
-    loops = 2_000
+    loops = 5_00 #0
     inC = 0
     counter = 0
     maxR = 1
-    IS_RADIAL = True
+    IS_RADIAL = False
 
 
+    # generates points and places them in the arrays
     while counter<loops:
         counted = False
 
         # here i make the random numbers
-        radius = generateCoordinates(IS_RADIAL, xCoords, yCoords)      
+        radius = generateCoordinate(IS_RADIAL, xCoords, yCoords)      
         #print(f"x: {xPos}, y: {yPos}, r: {radius}")
 
 
@@ -91,6 +92,7 @@ if __name__ == "__main__":
         #print("imperial", i, 9-2*i)
         
 
+    # prints out results
     print("sum divided by number in circle")
     print("\nMetric")
     print(metricArr, metricArrR, ", sum: ", sum(metricArrR),
@@ -143,6 +145,8 @@ if __name__ == "__main__":
         ax.add_patch(circles[i])
 
     fig.savefig('plotcircles.png')
+    
+    print(xCoords[1], yCoords[1])
 
 
     plt.plot(xCoords, yCoords, ".")
