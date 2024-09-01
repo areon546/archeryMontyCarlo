@@ -1,6 +1,15 @@
 # archeryMontyCarlo
 
-If you run monty.py, it will run a monty carlo simulation of an archery game (assuming no skill), and result in an example, such as seen in 'Figure_Uniform' or 'Figure_Radial'. 
+If you run monty.py, it will run a monty carlo simulation of an archery game (assuming no skill), and result in an example, such as seen in 'Figure_Uniform' or 'Figure_Radial' below:
+
+Radial:
+
+![](Figure_Radial.png)
+
+
+Uniform:
+
+![](Figure_Uniform.png)
 
 In terms of the accuracy of such a simulation, it is more accurate to run it radially, since Archers aim towards the centre, however because archers are not perfect, there is a slight bias against this and archers on occasion miss, so you can use the two models together to roughly estimate the expected score you would have if an archer was shooting without much skill. 
 
