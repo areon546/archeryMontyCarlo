@@ -22,3 +22,8 @@ The two models I have are a Radially distributed model, and a more Uniformly dis
 The uniform model is uniformly distributed amongst the x and y axes. 
 
 The current representation in figure 1 doesn't create random points radially, but alone the two axes. It's not a large change, just using a radius from a centre point and an angle. Realistically the angle doesn't matter for the distribution but makes it more apparent seeing it around the centre instead of one line going in one direction. If I ever get back to this project, I shall implement this functionality. 
+
+
+Interesting websites / sources:
+- https://stackoverflow.com/questions/28567166/uniformly-distribute-x-points-inside-a-circle
+- https://www.ncasarchery.org.uk/tournaments_events/scoring-rounds/metric-scoring-rounds/
