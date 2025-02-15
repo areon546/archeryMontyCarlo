@@ -148,7 +148,7 @@ def calculateAndPrintResults(numberOfShots, metricArr, imperialArr, loops):
 def displayShots(loops):
     # print("Hello, World!")
     loops = 5_00 #0
-    IS_RADIAL = False
+    IS_RADIAL = True
 
     # here i have the arrays and other important things
     metricArr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
